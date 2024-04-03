@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tucan-script-dynamic", "tuc
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tucan-script-csl", "tucan-script-csl\tucan-script-csl.vcxproj", "{42D414B4-657D-4800-B7F8-7B57DFA9B977}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tucan-script-plugin-sample", "tucan-script-plugin-sample\tucan-script-plugin-sample.vcxproj", "{4CD2866F-B15B-4359-AA49-869CD1930F17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{42D414B4-657D-4800-B7F8-7B57DFA9B977}.Release|x64.Build.0 = Release|x64
 		{42D414B4-657D-4800-B7F8-7B57DFA9B977}.Release|x86.ActiveCfg = Release|Win32
 		{42D414B4-657D-4800-B7F8-7B57DFA9B977}.Release|x86.Build.0 = Release|Win32
+		{4CD2866F-B15B-4359-AA49-869CD1930F17}.Debug|x64.ActiveCfg = Debug|x64
+		{4CD2866F-B15B-4359-AA49-869CD1930F17}.Debug|x64.Build.0 = Debug|x64
+		{4CD2866F-B15B-4359-AA49-869CD1930F17}.Debug|x86.ActiveCfg = Debug|Win32
+		{4CD2866F-B15B-4359-AA49-869CD1930F17}.Debug|x86.Build.0 = Debug|Win32
+		{4CD2866F-B15B-4359-AA49-869CD1930F17}.Release|x64.ActiveCfg = Release|x64
+		{4CD2866F-B15B-4359-AA49-869CD1930F17}.Release|x64.Build.0 = Release|x64
+		{4CD2866F-B15B-4359-AA49-869CD1930F17}.Release|x86.ActiveCfg = Release|Win32
+		{4CD2866F-B15B-4359-AA49-869CD1930F17}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

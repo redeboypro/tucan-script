@@ -21,8 +21,20 @@ int main()
     file.close();
 
     auto mod = std::make_shared<tucan_script::tucan_module>();
+
+    HMODULE plugin = LoadLibraryA("tucan-script-plugin-sample.dll");
+
+    if (!plugin)
+    {
+        std::cerr << "Unable to load plugin" << std::endl;
+        return 2;
+    }
+
+    mod->load_plugin(plugin);
     mod->load_from_source(src);
     mod->execute();
+
+    FreeLibrary(plugin);
 
     return 0;
 }

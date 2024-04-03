@@ -1,10 +1,13 @@
 #pragma once
+#include "windows.h"
 #include "tucan_function.h"
 #include "tucan_statement.h"
 #include <functional>
 
 namespace tucan_script
 {
+	const LPCSTR TUCAN_LOAD_FUNCTION_NAME = "tucan_load_plugin";
+
 	class tucan_module : public tucan_executable, public tucan_returnable, public std::enable_shared_from_this<tucan_module>
 	{
 	private:
@@ -42,6 +45,7 @@ namespace tucan_script
 
 		void load_external_executable(const std::string& name, const std::function<void(tucan_function&)>& del);
 		void load_from_source(const std::string& src);
+		void load_plugin(HINSTANCE hDll);
 
 		std::shared_ptr<tucan_operable> tryGetVariable(const std::string& name);
 		void setVariable(const std::string& name, std::shared_ptr<tucan_operable> variable);
@@ -53,5 +57,7 @@ namespace tucan_script
 		void reset() override;
 		void return_value() override;
 	};
+
+	typedef void(*tucan_plugin_load_fun)(tucan_module*);
 }
 

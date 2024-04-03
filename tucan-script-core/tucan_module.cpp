@@ -485,6 +485,12 @@ namespace tucan_script
 		process_container(rawTokens, this_as_shared, this_as_shared, nullptr);
 	}
 
+	void tucan_module::load_plugin(HINSTANCE hDll)
+	{
+		tucan_plugin_load_fun plugin_function_ptr = (tucan_plugin_load_fun) GetProcAddress(hDll, TUCAN_LOAD_FUNCTION_NAME);
+		plugin_function_ptr(this);
+	}
+
 	std::shared_ptr<tucan_operable> tucan_module::tryGetVariable(const std::string& name)
 	{
 		auto it = m_variables.find(name);
